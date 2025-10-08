@@ -25,42 +25,62 @@
     margin-top: -8px;
 }
 
-@keyframes geser-kiri {
+.teks-kelap-kelip {
+    /* Menerapkan animasi kelap-kelip ke elemen */
+    animation-name: kelip;
+    animation-duration: 1s; /* Kecepatan kelap-kelip (1 detik) */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; /* Berulang terus menerus */
+
+    /* Tambahkan styling lain untuk teks, misalnya warna */
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Mendefinisikan animasi kelap-kelip */
+@keyframes kelip {
+    0% { opacity: 1.0; } /* Muncul penuh */
+    50% { opacity: 0.0; } /* Hilang */
+    100% { opacity: 1.0; } /* Muncul lagi */
+}
+
+/*@keyframes geser-kiri {
     from {
         transform: translateX(0);
     }
     to {
         transform: translateX(-100%);
     }
-}
+}*/
 
-.gambar-berjalan {
+/*.gambar-berjalan {
     animation: geser-kiri 4s linear infinite;
-}
+}*/
 
-@keyframes kelap-kelip {
+/*@keyframes kelap-kelip {
     0%, 100% {
         opacity: 1;
     }
     50% {
         opacity: 0;
     }
-}
+}*/
 
-.gambar-kelap-kelip {
+/*.gambar-kelap-kelip {
     animation: kelap-kelip 0.5s steps(1, start) infinite;
-}
+}/*
 
 .gambar-animasi-total {
   /* Efek Berjalan/Bergerak */
-  animation-name: geser-kiri, kelap-kelip;
+  /*animation-name: geser-kiri, kelap-kelip;*/
   /* Durasi masing-masing animasi */
-  animation-duration: 5s, 0.5s;
+  /*animation-duration: 5s, 0.5s;*/
   /* Timing function */
-  animation-timing-function: linear, steps(1, start);
+  /*animation-timing-function: linear, steps(1, start);*/
   /* Jumlah ulangan */
-  animation-iteration-count: infinite, infinite;
-}
+  /*animation-iteration-count: infinite, infinite;
+}*/
 
 /*section-3*/
 .relatif2 {
@@ -120,6 +140,10 @@
 
     #walking-text {
         margin-top: -8px;
+    }
+
+    img.marquee1 {
+        width: 30px;
     }
 
     .posisi-absolut2 {
