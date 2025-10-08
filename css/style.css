@@ -1,0 +1,133 @@
+/*root*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Section video header*/
+#video-header {
+    position: relative;
+}
+
+.posisi-absolut {
+    position: absolute;
+    top: 25px;
+    z-index: 999;
+    right: 25px;
+}
+
+#walking-text {
+    background-image: url("../assets/image/Background-01.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -8px;
+}
+
+@keyframes geser-kiri {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.gambar-berjalan {
+    animation: geser-kiri 4s linear infinite;
+}
+
+@keyframes kelap-kelip {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.gambar-kelap-kelip {
+    animation: kelap-kelip 0.5s steps(1, start) infinite;
+}
+
+.gambar-animasi-total {
+  /* Efek Berjalan/Bergerak */
+  animation-name: geser-kiri, kelap-kelip;
+  /* Durasi masing-masing animasi */
+  animation-duration: 5s, 0.5s;
+  /* Timing function */
+  animation-timing-function: linear, steps(1, start);
+  /* Jumlah ulangan */
+  animation-iteration-count: infinite, infinite;
+}
+
+/*section-3*/
+.relatif2 {
+    position: relative;
+}
+
+.posisi-absolut2 {
+    position: absolute;
+    /*background-color: #ffffff;
+    opacity: 0.7;*/
+    top: 250px;
+    right: 0;
+}
+
+.posisi-absolut3 {
+    position: absolute;
+    /*background-color: #ffffff;
+    opacity: 0.7;*/
+    top: 550px;
+    right: 0;
+}
+
+/*Section 4*/
+#section-4 {
+    background-image: url("../assets/image/Background.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/*Section 5*/
+
+.posisi-absolut4 {
+    position: absolute;
+    /*background-color: #ffffff;
+    opacity: 0.7;*/
+    top: 20px;
+    right: 20px;
+}
+
+@media (max-width: 576px) {
+
+    .posisi-absolut {
+        position: absolute;
+        top: 10px;
+    }
+
+    .posisi-absolut img {
+        width: 25px;
+    }
+
+    #walking-text {
+        margin-top: -8px;
+    }
+
+    .posisi-absolut2 {
+        top: 50px;
+    }
+
+    .posisi-absolut3 {
+        top: 150px;
+    }
+
+    .posisi-absolut4 {
+    position: absolute;
+    /*background-color: #ffffff;
+    opacity: 0.7;*/
+    top: 30px;
+    right: 10px;
+    }
+}
