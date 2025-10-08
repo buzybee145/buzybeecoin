@@ -148,6 +148,10 @@
     }
 
     .posisi-absolut4 img.gbr-absolut4 {
-        width: 130px;
+        width: 120px;
+    }
+
+    footer {
+        margin-top: -5px;
     }
 }
